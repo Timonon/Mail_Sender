@@ -1,0 +1,31 @@
+﻿<Window x:Class="Login_Screen.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login_Screen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400">
+    <DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Label HorizontalAlignment="Center" FontSize="40" Grid.Column="1">Log in</Label>
+            <Label HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">Login</Label>
+            <TextBox x:Name="tbLogin" Grid.Column="1" Grid.Row="1" Height="20"></TextBox>
+            <Label HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2">Password</Label>
+            <TextBox x:Name="tbPassword" Grid.Column="1" Grid.Row="2" Height="20"></TextBox>
+            <Button Click="SubmitButton_Click" Margin="5" Grid.Column="1" Grid.Row="3"> Submit</Button>
+        </Grid>
+    </DockPanel>
+</Window>

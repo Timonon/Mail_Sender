@@ -1,0 +1,42 @@
+﻿<Window x:Class="Sender_Screen.MailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sender_Screen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">Mail sender</Label>
+            <TextBox x:Name="tbSendTo" Grid.Column="1" Grid.Row="1">Send to</TextBox>
+            <TextBox x:Name="tbTheme" Grid.Column="1" Grid.Row="2">Theme</TextBox>
+            <TextBox x:Name="tbMessage" Grid.Column="1" Grid.Row="3">Message</TextBox>
+            <Grid Grid.Column="1" Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            <Button Click="Send_Button_Click" Grid.Column="4" Grid.Row="4" Margin="6" >Send</Button>
+            <Button Click="Attach_File_Button_Click" Grid.Column="0" Grid.Row="4" Margin="6" >Attach file</Button>
+            <Button Click="Set_Priority_Button_Click" Grid.Column="1" Grid.Row="4" Margin="6" >Mark as important</Button>
+                
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>
